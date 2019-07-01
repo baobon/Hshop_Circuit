@@ -1,0 +1,7 @@
+Cách test WiFi
+Set jump
+
+ESP8266 update code : 	F F F F O O O F
+ESP8266 connect UART : 	F F F F O O F F
+Atmega328 update code :        	F F O O F F F F
+Atmega328 connect esp8266: 	O O F F F F F F

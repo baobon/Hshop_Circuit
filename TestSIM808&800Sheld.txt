@@ -1,0 +1,9 @@
+arduino sim808 GPS,BLUETOOTH 870k va Arduino GSM GPRS SIM800 Shield
+https://github.com/Khuuxuanngoc/Hshopvn_GSM
+Test 1: 
+Chay HSHOP_GSM : B_TestManual
+AT
+AT+GMR
+
+Test v?i SIM
+

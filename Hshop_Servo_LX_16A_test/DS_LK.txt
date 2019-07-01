@@ -1,0 +1,16 @@
+﻿CS1,CS2,CS3,CS4 				Tụ chống sét 2kv 102 or 103j
+RL1,RL2,RL3,RL4				Relay 5v/10A đen
+KF-2			x5		Domino KF5.08
+D1,D2,D3,D4,D5		x5		1N4148
+IC1			x1		ULN2003
+MCU			x1		ESP12F
+C1			x1		Tụ lọc nguồn  CCB 103(102J) - 630v
+C2,C4			x2		Tụ  10uF		0805
+C3,C5,C6			x3		Tụ  1uF		0805	
+R2			x1		4.7K ohm		0805
+R3,R5,R7			x3		10K ohm		0805
+R1,R4,R6,R8		x4		1K		0805
+
+C125
+
++ rx tx - 
