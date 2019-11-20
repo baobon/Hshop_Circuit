@@ -1,0 +1,29 @@
+Open terminal : -> cd / -> cd /boot -> sudo nano config.txt
+Then Add to the end of file : dtoverlay=i2c-rtc,ds1307
+Then Ctrl+X -> Y -> Enter to write file
+Open terminal : -> sudo reboot (To reboot your pi)
+
+Scan i2c -> Open terminal -> sudo i2cdetect -y 1 
+If you see 0x68 -> Your DS1307 RTC is connect
+
+How to use RTC DS1307
+You need remove and disable
+-> sudo apt-get -y remove fake-hwclock 		// remove fake hwclock
+-> sudo update-rc.d -f fake-hwclock remove	// remove update hwclock
+-> sudo systemctl disable fake-hwclock 		// disable fake-hwclock
+
+-> cd /lib/udev -> Go to folder udev
+-> sudo nano hwclock-set -> Open file hwclock-set
+
+#Comment 6 # to sart of line
+->	#	if [ -e /run/systemd/system ] ; then
+	#	 exit 0
+	#	fi
+
+& -> 	#	/sbin/hwclock --rtc=$dev --systz --badyear
+& -> 	#	/sbin/hwclock --rtc=$dev --systz
+Then Ctrl+X -> Y -> Enter to write file
+Open terminal -> sudo-reboot (To reboot your pi)
+
+Terminal Read time : sudo hwclock -r (to read time)
+Terminal Write time : sudo hwclock -w
